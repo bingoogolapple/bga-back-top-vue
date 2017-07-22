@@ -15,7 +15,9 @@
 * [关于我](#关于我)
 * [打赏支持](#打赏支持)
 
-## 效果图
+## 效果图 [Demo](http://www.bingoogolapple.cn/bga-npm-hello-world-vue)
+
+![demo](https://user-images.githubusercontent.com/8949716/28492106-4434d8cc-6f2f-11e7-860d-1bb11e5040ba.gif)
 
 ## 基本使用
 
@@ -158,7 +160,7 @@ animationTime | 可滚动控件滚动到顶部的动画时间，单位为毫秒�
 </style>
 ```
 
-#### 3.可以在任意的 Vue 组件中通过 JavaScript 代码主动触发可滚动容器滚动到顶部
+#### 3.可以在任意的 Vue 组件中通过 JavaScript 代码主动触发可滚动组件滚动到顶部。应用场景：滚动一定距离后重新加载了网络数据，加载完数据后将可滚动组件滚动到顶部
 
 ```JavaScript
 // 在 BGABacktop 内部已经为 Vue.prototype 添加了全局方法 $bgaBacktop，因此在 Vue 实例中可以直接通过 this.$bgaBacktop() 来调用该方法

@@ -6,6 +6,7 @@
     </div>
     <div class="footer">
       <h1>Demo - Footer</h1>
+      <span style="float: left; margin-left: 10px;" @click="backtop()">通过 JS 代码 this.$bgaBacktop() 主动触发滚动到顶部</span>
     </div>
   </div>
 </template>
@@ -13,6 +14,7 @@
   .demo2-container {
     height: calc(100% - 100px);
     text-align: center;
+
     .have-very-long-content {
       overflow: scroll;
       height: calc(100% - 200px);
@@ -20,46 +22,23 @@
         margin-bottom: 80px;
       }
     }
+
     .footer {
       border-top: 1px solid #eeeeee;
       height: 199px;
       line-height: 100px;
-    }
-  }
-
-  .sweet-code {
-    tab-size: 4;
-    -webkit-font-smoothing: auto;
-    &.inline {
-      display: inline-block;
-      padding: 0;
-      margin: 0;
-    }
-    .hljs-name,
-    .hljs-keyword {
-      color: #F92672;
-    }
-    .hljs-attr {
-      color: #A6E22E;
-    }
-    .hljs-string {
-      color: #E6DB74;
-    }
-    .hljs-comment {
-      color: #5C6273;
-    }
-    .hljs-selector-class {
-      color: #66D9EF;
-    }
-    &.theme-light {
-      .hljs-string {
-        color: #F49B0F;
-      }
-      .hljs-attr {
-        color: #88B42C;
-      }
-      .hljs-selector-class {
-        color: #4CA7DD;
+      span {
+        font-size: 13px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 10px;
+        color: #ffffff;
+        background-color: #7b79e5;
+        border-radius: 4px;
+        &:hover {
+          background-color: #ba6fda;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -70,7 +49,11 @@
       return {}
     },
     components: {},
-    methods: {},
+    methods: {
+      backtop () {
+        this.$bgaBacktop()
+      }
+    },
     mounted () {
       this.$nextTick(() => {
       })
