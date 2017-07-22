@@ -147,7 +147,7 @@
     },
     watch: {
       $route (val) {
-        setTimeout(this.addScrollListener, 200)
+        this.addScrollListener()
       }
     },
     methods: {
@@ -215,6 +215,11 @@
     },
     beforeDestroy () {
       this.removeScrollListener()
+    },
+    mounted () {
+      this.$nextTick(() => {
+        this.addScrollListener()
+      })
     }
   }
 </script>

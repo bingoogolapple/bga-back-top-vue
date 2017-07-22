@@ -1,6 +1,9 @@
 /**
  * Created by bingoogolapple on 2017/7/14.
  */
+import Demo1 from '@/views/demo/Demo1.vue'
+import Demo2 from '@/views/demo/Demo2.vue'
+
 export default [
   {
     path: '',
@@ -11,11 +14,11 @@ export default [
   {
     path: 'Demo1',
     name: 'Demo1',
-    component: resolve => require(['@/views/demo/Demo1.vue'], resolve)
+    component: Demo1
   },
   {
     path: 'Demo2',
     name: 'Demo2',
-    component: resolve => require(['@/views/demo/Demo2.vue'], resolve)
+    component: Demo2
   }
 ]

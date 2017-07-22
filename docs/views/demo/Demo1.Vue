@@ -10,7 +10,7 @@
   .demo1-container {
     height: calc(100% - 100px);
     text-align: center;
-    
+
     .have-very-long-content {
       overflow: scroll;
       height: 100%;
@@ -22,15 +22,5 @@
   }
 </style>
 <script>
-  export default {
-    data () {
-      return {}
-    },
-    components: {},
-    methods: {},
-    mounted () {
-      this.$nextTick(() => {
-      })
-    }
-  }
+  export default {}
 </script>

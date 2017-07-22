@@ -45,18 +45,10 @@
 </style>
 <script>
   export default {
-    data () {
-      return {}
-    },
-    components: {},
     methods: {
       backtop () {
         this.$bgaBacktop()
       }
-    },
-    mounted () {
-      this.$nextTick(() => {
-      })
     }
   }
 </script>

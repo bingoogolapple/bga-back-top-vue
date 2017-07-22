@@ -68,7 +68,7 @@
       ])
     },
     mounted () {
-      this.$nextTick(function () {
+      this.$nextTick(() => {
         this.$gitHubApi.getGitHubUser(this).then(response => {
           this.setGitHubUser(response.data)
         })
