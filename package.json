@@ -1,7 +1,7 @@
 {
   "name": "bga-back-top-vue",
-  "version": "0.1.3",
-  "description": "Vue-based back-top component",
+  "version": "0.0.1",
+  "description": "Vue-based back-top component 基于 Vue 2.x 实现的「滚动可滚动组件到顶部」的组件，支持多种自定义属性配置，以及通过 slot 插桩的方式深度定制 BgaBackTop 的内容。整个项目只需要在根组件中添加一次即可",
   "keywords": [
     "bga",
     "back",
@@ -47,7 +47,7 @@
     "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
-    "file-loader": "^0.8.4",
+    "file-loader": "^0.11.1",
     "github-markdown-css": "^2.8.0",
     "imports-loader": "^0.6.5",
     "json-loader": "^0.5.4",
@@ -61,6 +61,7 @@
     "marked": "^0.3.6",
     "moment": "^2.18.1",
     "element-ui": "^1.3.7",
+    "url-loader": "^0.5.8",
     "vue": "^2.3.3",
     "vuex": "^2.3.1",
     "vue-loader": "^9.9.5",

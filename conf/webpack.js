@@ -18,6 +18,10 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+function assetsPath (_path) {
+  return path.posix.join('static', _path)
+}
+
 module.exports = {
   resolveLoader: {
     root: path.join(__dirname, 'node_modules')
@@ -59,10 +63,19 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file',
-        query: {
-          name: '[name].[ext]?[hash]'
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: assetsPath('img/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
     ]

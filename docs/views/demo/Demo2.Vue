@@ -6,7 +6,7 @@
     </div>
     <div class="footer">
       <h1>Demo - Footer</h1>
-      <span style="float: left; margin-left: 10px;" @click="backTop()">通过 JS 代码 this.$bgaBacktop() 主动触发滚动到顶部</span>
+      <span style="float: left; margin-left: 10px;" @click="backTop()">通过 JS 代码 this.$bgaBackTop() 主动触发滚动到顶部</span>
     </div>
   </div>
 </template>
