@@ -2,9 +2,31 @@
   "name": "bga-npm-hello-world-vue",
   "version": "0.1.1",
   "description": "bga-npm-hello-world-vue",
+  "keywords": [
+    "bga",
+    "helloworld"
+  ],
+  "author": "bingoogolapple <bingoogolapple@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bingoogolapple/bga-npm-hello-world-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bingoogolapple/bga-npm-hello-world-vue/issues"
+  },
+  "homepage": "https://github.com/bingoogolapple/bga-npm-hello-world-vue#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config docs/webpack.config.js --inline --hot",
+    "build": "npm run build-src && npm run build-docs",
+    "build-src": "webpack --config src/webpack.config.js --progress --hide-modules",
+    "build-docs": "webpack --config docs/webpack.config.js --progress --hide-modules"
+  },
   "devDependencies": {
     "axios": "^0.16.2",
     "babel-core": "^6.0.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.22.0",
@@ -13,6 +35,13 @@
     "babel-register": "^6.22.0",
     "cross-env": "^5.0.1",
     "css-loader": "^0.23.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-friendly-formatter": "^2.0.7",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
     "file-loader": "^0.8.4",
     "github-markdown-css": "^2.8.0",
     "imports-loader": "^0.6.5",
@@ -40,26 +69,5 @@
   "peerDependencies": {
     "vue": "2.x",
     "babel-preset-es2015": "6.x"
-  },
-  "scripts": {
-    "dev": "webpack-dev-server --config docs/webpack.config.js --inline --hot",
-    "build": "npm run build-src && npm run build-docs",
-    "build-src": "webpack --config src/webpack.config.js --progress --hide-modules",
-    "build-docs": "webpack --config docs/webpack.config.js --progress --hide-modules"
-  },
-  "keywords": [
-    "bga",
-    "helloworld"
-  ],
-  "main": "src/index.js",
-  "author": "bingoogolapple <bingoogolapple@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bingoogolapple/bga-npm-hello-world-vue.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bingoogolapple/bga-npm-hello-world-vue/issues"
-  },
-  "homepage": "https://github.com/bingoogolapple/bga-npm-hello-world-vue#readme"
+  }
 }

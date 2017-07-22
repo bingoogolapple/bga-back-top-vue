@@ -1,8 +1,8 @@
-@mixin heightBox($other-height){
+@mixin heightBox($other-height) {
   height: calc(100% - #{$other-height});
 }
 
-@mixin excludeLabelListHeightBox(){
+@mixin excludeLabelListHeightBox() {
   @include heightBox(120px);
 
   @media all and (max-width: 1004px) {

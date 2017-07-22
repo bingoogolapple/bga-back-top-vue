@@ -56,25 +56,29 @@ a {
   font-size: 12px;
 }
 
-.el-loading-mask{
-  background: rgba(238,238,238,.5);
+.el-loading-mask {
+  background: rgba(238, 238, 238, .5);
 }
 
-.el-message{
+.el-message {
   top: 70px;
 }
+
 .el-message__img {
   top: 50%;
   transform: translateY(-50%);
 }
+
 .el-message__group {
-  min-height:20px;
-  height:auto!important;
+  min-height: 20px;
+  height: auto !important;
   height: 20px;
 }
+
 .el-message__group .el-message__closeBtn {
   color: #ffffff;
 }
+
 .el-message__group p {
   max-width: 500px;
   white-space: pre-wrap;

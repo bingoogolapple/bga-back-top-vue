@@ -20,7 +20,7 @@ const actions = {
 }
 
 const getters = {
-  sdf: (state) => {
+  sdf (state) {
     return state.sdf
   }
 }

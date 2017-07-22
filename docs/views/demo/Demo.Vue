@@ -1,12 +1,12 @@
 <template>
-    <div class="demo-container">
-        <router-view class="cl"/>
-    </div>
+  <div class="demo-container">
+    <router-view class="cl"/>
+  </div>
 </template>
 <style lang="scss" scoped>
-    .demo-container {
-    }
+  .demo-container {
+  }
 </style>
 <script>
-    export default {}
+  export default {}
 </script>

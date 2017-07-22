@@ -37,16 +37,16 @@ const actions = {
 }
 
 const getters = {
-  gitHubUsername: (state) => {
+  gitHubUsername (state) {
     return state.gitHubUsername
   },
-  context: (state) => {
+  context (state) {
     return `${state.gitHubUsername}/${state.gitHubUsername}.github.io`
   },
-  gitHubUser: (state) => {
+  gitHubUser (state) {
     return state.gitHubUser
   },
-  thirdPartySite: (state) => {
+  thirdPartySite (state) {
     return state.thirdPartySite
   }
 }
