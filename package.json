@@ -1,20 +1,25 @@
 {
-  "name": "bga-npm-hello-world-vue",
+  "name": "bga-back-top-vue",
   "version": "0.1.3",
-  "description": "bga-npm-hello-world-vue",
+  "description": "Vue-based back-top component",
   "keywords": [
     "bga",
-    "helloworld"
+    "back",
+    "backtop",
+    "back-top",
+    "vue",
+    "vue-back-top",
+    "vue-backtop"
   ],
-  "author": "bingoogolapple <bingoogolapple@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bingoogolapple/bga-npm-hello-world-vue.git"
+    "url": "git+https://github.com/bingoogolapple/bga-back-top-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/bingoogolapple/bga-npm-hello-world-vue/issues"
+    "url": "https://github.com/bingoogolapple/bga-back-top-vue/issues"
   },
-  "homepage": "https://github.com/bingoogolapple/bga-npm-hello-world-vue#readme",
+  "homepage": "https://github.com/bingoogolapple/bga-back-top-vue#readme",
+  "author": "bingoogolapple <bingoogolapple@gmail.com>",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {

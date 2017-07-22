@@ -9,8 +9,8 @@ Vue.use(Loading)
 Vue.component(Message.name, Message)
 Vue.prototype.$message = Message
 
-import BgaBacktop from '../src'
-Vue.use(BgaBacktop)
+import BgaBackTop from '../src'
+Vue.use(BgaBackTop)
 
 import lodash from 'lodash'
 import moment from 'moment'

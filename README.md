@@ -1,10 +1,10 @@
-# bga-npm-hello-world-vue
+# bga-back-top-vue
 
-[![npm](https://img.shields.io/npm/v/bga-npm-hello-world-vue.svg) ![npm](https://img.shields.io/npm/dm/bga-npm-hello-world-vue.svg)](https://www.npmjs.com/package/bga-npm-hello-world-vue)
+[![npm](https://img.shields.io/npm/v/bga-back-top-vue.svg) ![npm](https://img.shields.io/npm/dm/bga-back-top-vue.svg)](https://www.npmjs.com/package/bga-back-top-vue)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/apertureless/vue-parallax/blob/master/LICENSE.txt)
 
-基于 Vue 2.x 实现的「滚动可滚动组件到顶部」的组件，支持多种自定义属性配置，以及通过 slot 插桩的方式深度定制 BGABacktop 的内容。整个项目只需要在根组件中添加一次即可
+基于 Vue 2.x 实现的「滚动可滚动组件到顶部」的组件，支持多种自定义属性配置，以及通过 slot 插桩的方式深度定制 BgaBackTop 的内容。整个项目只需要在根组件中添加一次即可
 
 ## 目录
 
@@ -15,7 +15,7 @@
 * [关于我](#关于我)
 * [打赏支持](#打赏支持)
 
-## 效果图 [Demo](http://www.bingoogolapple.cn/bga-npm-hello-world-vue)
+## 效果图 [Demo](http://www.bingoogolapple.cn/bga-back-top-vue)
 
 ![demo](https://user-images.githubusercontent.com/8949716/28492106-4434d8cc-6f2f-11e7-860d-1bb11e5040ba.gif)
 
@@ -24,13 +24,13 @@
 > 1.安装依赖
 
 ```
-npm install --save bga-npm-hello-world-vue
+npm install --save bga-back-top-vue
 ```
 > 2.在入口 js 文件中导入。我这里是 main.js
 
 ```JavaScript
-import BgaBacktop from 'bga-npm-hello-world-vue'
-Vue.use(BgaBacktop)
+import BgaBackTop from 'bga-back-top-vue'
+Vue.use(BgaBackTop)
 ```
 > 3.在根组件中使用，整个项目只需要在根组件中添加一次即可。我这里是 App.vue
 
@@ -41,18 +41,18 @@ Vue.use(BgaBacktop)
     <router-view/>
 
     <!-- 在根组件中使用，整个项目只需要在这里添加一次即可 -->
-    <bga-backtop :threshold="150" :right="160" :bottom="60" :width="40" :height="40" :svgMajorColor="'#7b79e5'"
+    <bga-back-top :threshold="150" :right="160" :bottom="60" :width="40" :height="40" :svgMajorColor="'#7b79e5'"
                  :svgMinorColor="'#ba6fda'" :svgType="'rocket'"/>
   </div>
 </template>
 ```
-> 4.为需要被滚动的标签添加「bga-backtop」样式
+> 4.为需要被滚动的标签添加「bga-back-top」样式
 
 ```html
 <template>
   <div class="demo1-container">
-    <!-- 该标签里有很长很长的内容，为其添加滚动到顶部的功能，添加「bga-backtop」样式 -->
-    <div class="have-very-long-content bga-backtop">
+    <!-- 该标签里有很长很长的内容，为其添加滚动到顶部的功能，添加「bga-back-top」样式 -->
+    <div class="have-very-long-content bga-back-top">
       <h2 v-for="n in 30">have very long content 很长很长的内容{{ n }} </h2>
     </div>
   </div>
@@ -65,26 +65,26 @@ Vue.use(BgaBacktop)
 
 属性名 | 说明 | 默认值
 :----------- | :----------- | :-----------
-imgUrl | BGABacktop 为图片模式时图片的 url，如果设置了该属性，则会忽略 svg 开头的相关属性 | null
-imgCss | BGABacktop 为图片模式时图片的样式，如果设置了该属性，则会忽略 svg 开头的相关属性 | null
+imgUrl | BgaBackTop 为图片模式时图片的 url，如果设置了该属性，则会忽略 svg 开头的相关属性 | null
+imgCss | BgaBackTop 为图片模式时图片的样式，如果设置了该属性，则会忽略 svg 开头的相关属性 | null
 
 #### SVG 模式相关属性说明
 
 属性名 | 说明 | 默认值
 :----------- | :----------- | :-----------
-svgMajorColor | BGABacktop 为 SVG 模式时的主要颜色 | #bfbfbf
-svgMinorColor | BGABacktop 为 SVG 模式时的次要颜色 | #bfbfbf
+svgMajorColor | BgaBackTop 为 SVG 模式时的主要颜色 | #bfbfbf
+svgMinorColor | BgaBackTop 为 SVG 模式时的次要颜色 | #bfbfbf
 svgType | SVG 模式的样式类型，包括 circle_border_arrow、circle_fill_arrow、rocket_smoke、rocket | rocket
 
 #### 公共属性说明
 
 属性名 | 说明 | 默认值
 :----------- | :----------- | :-----------
-right | BGABacktop 右边缘离浏览器右边缘的距离，单位为 px，但是开发者只需要写数字就行 | 30
-bottom | BGABacktop 下边缘离浏览器下边缘的距离，单位为 px，但是开发者只需要写数字就行 | 60
-width | BGABacktop 宽度，单位为 px，但是开发者只需要写数字就行 | 48
-height | BGABacktop 高度，单位为 px，但是开发者只需要写数字就行 | 48
-threshold | 可滚动控件滚动偏移多少后才显示 BGABacktop，必须大于 100 | 150
+right | BgaBackTop 右边缘离浏览器右边缘的距离，单位为 px，但是开发者只需要写数字就行 | 30
+bottom | BgaBackTop 下边缘离浏览器下边缘的距离，单位为 px，但是开发者只需要写数字就行 | 60
+width | BgaBackTop 宽度，单位为 px，但是开发者只需要写数字就行 | 48
+height | BgaBackTop 高度，单位为 px，但是开发者只需要写数字就行 | 48
+threshold | 可滚动控件滚动偏移多少后才显示 BgaBackTop，必须大于 100 | 150
 animationTime | 可滚动控件滚动到顶部的动画时间，单位为毫秒，100 到 200 之间 | 150
 
 ## 高级用法
@@ -98,20 +98,20 @@ animationTime | 可滚动控件滚动到顶部的动画时间，单位为毫秒�
     <router-view class="main-container"/>
 
     <!-- 在根组件中使用，整个项目只需要在这里添加一次即可 -->
-    <bga-backtop :threshold="150" :right="560" :bottom="60" :width="40" :height="40" :imgCss="'bga-backtop-img'"/>
+    <bga-back-top :threshold="150" :right="560" :bottom="60" :width="40" :height="40" :imgCss="'bga-back-top-img'"/>
   </div>
 </template>
 <style lang="scss">
-  // BGABacktop 普通状态和鼠标悬停状态时的图片样式
-  .bga-backtop-img {
-    content: url("/assets/bga-backtop-normal.png");
+  // BgaBackTop 普通状态和鼠标悬停状态时的图片样式
+  .bga-back-top-img {
+    content: url("/assets/bga-back-top-normal.png");
     &:hover {
-      content: url("/assets/bga-backtop-hover.png");
+      content: url("/assets/bga-back-top-hover.png");
     }
   }
 </style>
 ```
-#### 2.通过 slot 插桩的方式定制 BGABacktop 的内容，如果为其添加了子组件则不会显示默认样式。下面演示插入自定义 SVG 和 img。当然开发者也可以插入其他子组件
+#### 2.通过 slot 插桩的方式定制 BgaBackTop 的内容，如果为其添加了子组件则不会显示默认样式。下面演示插入自定义 SVG 和 img。当然开发者也可以插入其他子组件
 
 > 插入自定义 SVG。可以到 [阿里巴巴矢量图标库](http://www.iconfont.cn) 中下载 SVG
 
@@ -122,7 +122,7 @@ animationTime | 可滚动控件滚动到顶部的动画时间，单位为毫秒�
     <router-view class="main-container"/>
 
     <!-- 在根组件中使用，整个项目只需要在这里添加一次即可 -->
-    <bga-backtop :threshold="150" :right="80" :bottom="60" :width="40" :height="40">
+    <bga-back-top :threshold="150" :right="80" :bottom="60" :width="40" :height="40">
       <svg width="40" height="40" viewBox="0 0 1024 1024">
         <!-- 火箭外形 -->
         <path fill="#7b79e5"
@@ -131,7 +131,7 @@ animationTime | 可滚动控件滚动到顶部的动画时间，单位为毫秒�
         <!-- 中间圆点 -->
         <path fill="#ba6fda" d="M512 448m-64 0a4 4 0 1 0 128 0 4 4 0 1 0-128 0Z" p-id="5020"/>
       </svg>
-    </bga-backtop>
+    </bga-back-top>
   </div>
 </template>
 ```
@@ -144,17 +144,17 @@ animationTime | 可滚动控件滚动到顶部的动画时间，单位为毫秒�
     <router-view class="main-container"/>
 
     <!-- 在根组件中使用，整个项目只需要在这里添加一次即可 -->
-    <bga-backtop :threshold="150" :right="480" :bottom="60" :width="40" :height="40">
-      <img class="bga-backtop-img" style="width: 100%; height: 100%;"/>
-    </bga-backtop>
+    <bga-back-top :threshold="150" :right="480" :bottom="60" :width="40" :height="40">
+      <img class="bga-back-top-img" style="width: 100%; height: 100%;"/>
+    </bga-back-top>
   </div>
 </template>
 <style lang="scss">
-  // BGABacktop 普通状态和鼠标悬停状态时的图片样式
-  .bga-backtop-img {
-    content: url("/assets/bga-backtop-normal.png");
+  // BgaBackTop 普通状态和鼠标悬停状态时的图片样式
+  .bga-back-top-img {
+    content: url("/assets/bga-back-top-normal.png");
     &:hover {
-      content: url("/assets/bga-backtop-hover.png");
+      content: url("/assets/bga-back-top-hover.png");
     }
   }
 </style>
@@ -163,8 +163,8 @@ animationTime | 可滚动控件滚动到顶部的动画时间，单位为毫秒�
 #### 3.可以在任意的 Vue 组件中通过 JavaScript 代码主动触发可滚动组件滚动到顶部。应用场景：滚动一定距离后重新加载了网络数据，加载完数据后将可滚动组件滚动到顶部
 
 ```JavaScript
-// 在 BGABacktop 内部已经为 Vue.prototype 添加了全局方法 $bgaBacktop，因此在 Vue 实例中可以直接通过 this.$bgaBacktop() 来调用该方法
-this.$bgaBacktop()
+// 在 BgaBackTop 内部已经为 Vue.prototype 添加了全局方法 $bgaBackTop，因此在 Vue 实例中可以直接通过 this.$bgaBackTop() 来调用该方法
+this.$bgaBackTop()
 ```
 
 ## 关于我

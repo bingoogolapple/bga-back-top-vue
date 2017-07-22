@@ -1,9 +1,9 @@
-var Backtop = require('./components/BgaBacktop.vue')
+var BackTop = require('./components/BgaBackTop.vue')
 
-const BgaBacktop = {
+const BgaBackTop = {
   install: function (Vue) {
-    Vue.component('bga-backtop', Backtop)
-    Vue.prototype.$bgaBacktop = function () {
+    Vue.component('bga-back-top', BackTop)
+    Vue.prototype.$bgaBackTop = function () {
       if (Vue.prototype.$bagBacktopInstance) {
         Vue.prototype.$bagBacktopInstance.startScrollToTop()
       }
@@ -11,4 +11,4 @@ const BgaBacktop = {
   }
 }
 
-export default BgaBacktop
+export default BgaBackTop

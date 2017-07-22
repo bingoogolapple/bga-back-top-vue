@@ -1,6 +1,6 @@
 <template>
   <div class="demo1-container">
-    <div class="have-very-long-content bga-backtop">
+    <div class="have-very-long-content bga-back-top">
       <h1>Demo1 - No Footer</h1>
       <h2 v-for="n in 30">have very long content 很长很长的内容{{ n }} </h2>
     </div>
