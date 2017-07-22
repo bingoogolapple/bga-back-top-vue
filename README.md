@@ -17,7 +17,7 @@
 
 ## 效果图 [Demo](http://www.bingoogolapple.cn/bga-back-top-vue)
 
-![demo](https://user-images.githubusercontent.com/8949716/28492106-4434d8cc-6f2f-11e7-860d-1bb11e5040ba.gif)
+![bga-back-top](https://user-images.githubusercontent.com/8949716/28494302-9dc0f79a-6f5c-11e7-9101-62836da0916a.gif)
 
 ## 基本使用
 
