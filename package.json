@@ -1,6 +1,6 @@
 {
   "name": "bga-back-top-vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue-based back-top component 基于 Vue 2.x 实现的「滚动可滚动组件到顶部」的组件，支持多种自定义属性配置，以及通过 slot 插桩的方式深度定制 BgaBackTop 的内容。整个项目只需要在根组件中添加一次即可",
   "keywords": [
     "bga",
