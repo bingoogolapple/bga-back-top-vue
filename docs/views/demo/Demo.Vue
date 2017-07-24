@@ -4,17 +4,20 @@
       <router-link class="mr30" tag="li" :to="{name:'Demo1'}">Demo1</router-link>
       <router-link class="mr30" tag="li" :to="{name:'Demo2'}">Demo2</router-link>
     </ul>
-    <router-view class="cl"/>
+    <router-view/>
   </div>
 </template>
 <style lang="scss" scoped>
   .demo-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     ul {
+      flex: 0 0 99px;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      list-style: none;
-      height: 99px;
       border-bottom: 1px solid #eeeeee;
       li {
         font-size: 30px;

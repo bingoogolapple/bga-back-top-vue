@@ -15,6 +15,7 @@ export default [
     component: AboutMe
   },
   {
+    name: 'Demo',
     path: '/Demo',
     component: Demo,
     children: demoRoutes
