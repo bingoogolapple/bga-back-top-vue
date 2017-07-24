@@ -146,8 +146,10 @@
       }
     },
     watch: {
-      $route (val) {
-        this.addScrollListener()
+      $route (to, from) {
+        // 这里先清除滚动监听器「然后延时500毫秒，否则整个项目只添加一个 BgaBackTop 时可能会出现失效」
+        this.removeScrollListener()
+        setTimeout(this.addScrollListener, 500)
       }
     },
     methods: {
