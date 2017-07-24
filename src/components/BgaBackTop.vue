@@ -53,7 +53,7 @@
     </slot>
   </div>
 </template>
-<style lang="scss" scoped>
+<style>
 </style>
 <script>
   import Vue from 'vue'
