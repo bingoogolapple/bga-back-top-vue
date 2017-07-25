@@ -16,7 +16,7 @@
     text-align: center;
 
     .have-very-long-content {
-      overflow: scroll;
+      overflow-y: auto;
       height: calc(100% - 200px);
       h2 {
         margin-bottom: 80px;
