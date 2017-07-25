@@ -9,7 +9,7 @@
 </template>
 <style lang="scss" scoped>
   .demo-container {
-    flex-grow: 1;
+    width: calc(100% - 200px); // 兼容 IE 10
     display: flex;
     flex-direction: column;
     height: 100%;
