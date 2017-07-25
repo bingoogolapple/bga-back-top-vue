@@ -12,7 +12,7 @@
     text-align: center;
 
     .have-very-long-content {
-      overflow: scroll;
+      overflow-y: auto;
       height: 100%;
 
       h2 {

@@ -1,10 +1,12 @@
 <template>
   <!-- 最外层套一层 div 避免 gitHubUser 还未加载完时，右侧占满整个浏览器 -->
-  <div style="height: 100%;">
-    <div class="left-layout-container" v-if="gitHubUser">
-      <img @click="home" class="avatar" :src="gitHubUser.avatar_url">
-      <div class="login-name">{{gitHubUser.login}}</div>
-      <div class="bio">{{gitHubUser.bio}}</div>
+  <div>
+    <div class="left-layout-container">
+      <div class="user-info">
+        <img v-if="gitHubUser" @click="home" :src="gitHubUser.avatar_url">
+        <div v-if="gitHubUser" class="login-name">{{gitHubUser.login}}</div>
+        <div v-if="gitHubUser">{{gitHubUser.bio}}</div>
+      </div>
       <ul class="other-site">
         <li v-for="site in thirdPartySite" :key="site.url" @click="openThirdPartySite(site.url)">
           <img :src="site.img">
@@ -14,10 +16,10 @@
         <router-link :class="isDemo ? 'selected-menu':''" tag="li" :to="{name: 'Demo'}">Demo</router-link>
         <router-link :class="isAboutMe ? 'selected-menu':''" tag="li" :to="{name: 'AboutMe'}">AboutMe</router-link>
       </ul>
-      <div class="qq-group">
+      <div v-if="showQQGroup" class="qq-group">
         <span>BGA 系列</span>
         <span>开源库 QQ 群</span>
-        <img src="assets/qq-group.png">
+        <img src="static/img/qq-group.png">
       </div>
       <div class="powered">
         Powered by <span
@@ -33,39 +35,44 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow: scroll;
+    overflow-y: auto;
   }
 
-  .avatar {
-    width: 70px;
-    flex: 0 0 70px;
-    border-radius: 35px;
+  .user-info {
+    flex: 0 0 130px;
     margin-top: 50px;
-    margin-left: 65px;
-    cursor: pointer;
-  }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-  .login-name {
-    text-align: center;
-    margin: 14px auto 12px;
-    font-size: 14px;
-    flex: 0 0 16px;
-    line-height: 16px;
-    color: #4b595f;
-  }
+    img {
+      width: 70px;
+      flex: 0 0 70px;
+      border-radius: 35px;
+      cursor: pointer;
+    }
 
-  .bio {
-    text-align: center;
-    margin: 0px auto;
-    font-size: 13px;
-    flex: 0 0 18px;
-    line-height: 18px;
-    color: #849aa4;
+    .login-name {
+      margin-top: 14px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      flex: 0 0 16px;
+      line-height: 16px;
+      color: #4b595f;
+    }
+
+    :last-child {
+      font-size: 13px;
+      flex: 0 0 18px;
+      line-height: 18px;
+      color: #849aa4;
+    }
   }
 
   .other-site {
     margin-top: 20px;
     margin-bottom: 67px;
+    list-style: none;
     flex: 0 0 20px;
     display: flex;
     justify-content: center;
@@ -77,7 +84,7 @@
         height: 25px;
       }
     }
-    li:last-child {
+    :last-child {
       margin-right: 0px;
     }
   }
@@ -86,6 +93,7 @@
     flex: 1 1 150px;
     min-height: 150px;
     display: flex;
+    list-style: none;
     flex-direction: column;
     color: #4b595f;
     li {

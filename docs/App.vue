@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <left-layout class="left-container"/>
-    <router-view/>
+    <router-view class="main-container"/>
 
     <bga-back-top :threshold="150" :right="640" :bottom="60" :width="40" :height="40"
                  :imgUrl="'assets/bga-back-top-normal.png'"/>
@@ -40,12 +40,16 @@
   .app {
     display: flex;
     height: 100%;
-    overflow: hidden;
   }
 
   .left-container {
     flex: 0 0 199px;
     border-right: 1px solid #eeeeee;
+    height: 100%;
+  }
+
+  .main-container {
+    width: 100%;
   }
 
   // 滚动到顶部组件普通状态和鼠标悬停状态时的图片样式

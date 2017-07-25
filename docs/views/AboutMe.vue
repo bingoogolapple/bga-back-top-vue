@@ -6,7 +6,7 @@
 <style lang="scss" scoped>
   .about-me {
     padding: 30px;
-    overflow: scroll;
+    overflow-y: auto;
   }
 </style>
 <script>
