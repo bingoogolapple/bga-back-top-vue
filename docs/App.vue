@@ -4,7 +4,7 @@
     <router-view class="main-container"/>
 
     <bga-back-top :threshold="150" :right="640" :bottom="60" :width="40" :height="40"
-                 :imgUrl="'assets/bga-back-top-normal.png'"/>
+                  :imgUrl="'assets/bga-back-top-normal.png'"/>
 
     <bga-back-top :threshold="150" :right="560" :bottom="60" :width="40" :height="40" :imgCss="'bga-back-top-img'"/>
 
@@ -13,16 +13,16 @@
     </bga-back-top>
 
     <bga-back-top :threshold="150" :right="400" :bottom="60" :width="40" :height="40" :svgMajorColor="'#7b79e5'"
-                 :svgType="'circle_border_arrow'"/>
+                  :svgType="'circle_border_arrow'"/>
 
     <bga-back-top :threshold="150" :right="320" :bottom="60" :width="40" :height="40" :svgMajorColor="'#7b79e5'"
-                 :svgType="'circle_fill_arrow'"/>
+                  :svgType="'circle_fill_arrow'"/>
 
     <bga-back-top :threshold="150" :right="240" :bottom="60" :width="40" :height="40" :svgMajorColor="'#7b79e5'"
-                 :svgMinorColor="'#ba6fda'" :svgType="'rocket_smoke'"/>
+                  :svgMinorColor="'#ba6fda'" :svgType="'rocket_smoke'"/>
 
     <bga-back-top :threshold="150" :right="160" :bottom="60" :width="40" :height="40" :svgMajorColor="'#7b79e5'"
-                 :svgMinorColor="'#ba6fda'" :svgType="'rocket'"/>
+                  :svgMinorColor="'#ba6fda'" :svgType="'rocket'"/>
 
     <bga-back-top :threshold="150" :right="80" :bottom="60" :width="40" :height="40">
       <svg width="40" height="40" viewBox="0 0 1024 1024">
@@ -49,7 +49,7 @@
   }
 
   .main-container {
-    width: 100%;
+    flex-grow: 1;
   }
 
   // 滚动到顶部组件普通状态和鼠标悬停状态时的图片样式
